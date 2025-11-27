@@ -14,12 +14,23 @@
 </script>
 
 <template>
-  <div v-html="html"></div>
+  <div class="content" v-html="html"></div>
 </template>
 
 <style>
+
 h2 {
+  margin: 20px 0;
   border-left: 5px solid var(--color-primary);
   padding-left: 10px;
 }
+
+li {
+  list-style: none;
+}
+
+div.content {
+  padding: 0 0 100px 0;
+}
+
 </style>
