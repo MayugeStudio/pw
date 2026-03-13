@@ -1,13 +1,189 @@
 @charset "utf-8";
 
+:root {
+  --bg: #181818;
+  --surface: #222222;
+  --text: #eee;
+  --accent: #ffcb05;
+  --secondary: #6fa8dc;
+  --rgb-border: 255, 255, 255, 120;
+}
+
 @font-face {
   font-family: Joan;
   src: url(fonts/Joan-Regular.ttf);
 }
 
 body {
-  background-color: #181818;
-  color: #eee;
+  width: 720px;
+  margin: 20px auto;
+
+  background-color: var(--bg);
+  color: var(--text);
   font-family: Joan;
+
+  box-sizing: border-box;
+}
+
+/* Link */
+a:link,
+a:visited {
+  color: var(--text);
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-decoration-color: var(--secondary);
+  text-underline-offset: 2px;
+}
+
+/* Headers */
+h1 {
+  color: var(--text);
+  font-size: 2rem;
+  margin-bottom: 25px;
+}
+
+h1::before {
+  content: "[";
+  color: var(--secondary);
+}
+
+h1::after {
+  content: "]";
+  color: var(--secondary);
+}
+
+h1 a:link,
+h1 a:visited {
+  font-size: 2rem;
+  color: var(--text);
+}
+
+h2 {
+  font-size: 1.8rem;
+  font-weight: bold;
+
+  border-left: 2px solid var(--secondary);
+  padding-left: 1rem;
+  margin-bottom: 25px;
+}
+
+h3 {
+  font-size: 1.2rem;
+}
+
+header {
+  width: 720px;
+  border-bottom: rgb(var(--rgb-border)) 1px solid;
+}
+
+
+nav ul {
+  display: flex;
+  justify-content: space-around;
+}
+
+nav ul li {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  cursor: pointer;
+  padding: 10px 0;
+}
+
+nav ul li:hover {
+  background-color: var(--surface);
+}
+
+nav ul li a:link,
+nav ul li a:visited {
+  color: var(--text);
+  font-size: 1.4rem;
+}
+
+li:hover a:link,
+li:hover a:visited {
+  text-decoration-color: var(--text);
+}
+
+li:active a:link,
+li:active a:visited {
+  text-decoration-color: var(--accent);
+}
+
+main {
+  width: 480px;
+  margin: 0 auto;
+  padding: 2rem 0;
+}
+
+/* Links */
+#links {
+  margin-left: 1rem;
+}
+
+#links li {
+  position: relative;
+  margin-bottom: 5px;
+}
+
+#links li::before {
+  content: "";
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  top: 0.5rem;
+  left: -0.8rem;
+  border-radius: 50%;
+  background-color: var(--secondary);
+}
+
+#links li a {
+  font-size: 1.3rem;
+}
+
+p {
+  font-size: 1.3rem;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+footer {
+  position: relative;
+}
+
+small {
+  font-size: 0.8rem;
+}
+
+
+/* Animations */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+/* Pet's Icons */
+.icon-container {
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+}
+
+.icon {
+  width: 80px;
+  height: 80px;
+}
+
+.kaputi {
+  animation: float 4s ease-in-out infinite;
+  animation-delay: -2s;
+}
+
+.pippi {
+  animation: float 4s ease-in-out infinite;
 }
 
