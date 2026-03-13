@@ -1,0 +1,13 @@
+@charset "utf-8";
+
+@font-face {
+  font-family: Joan;
+  src: url(fonts/Joan-Regular.ttf);
+}
+
+body {
+  background-color: #181818;
+  color: #eee;
+  font-family: Joan;
+}
+
