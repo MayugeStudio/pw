@@ -14,15 +14,24 @@
   src: url(fonts/Joan-Regular.ttf);
 }
 
+* { box-sizing: border-box; }
+
+html, body {
+  height: 90%;
+}
+
 body {
-  width: 720px;
+  display: flex;
+  flex-direction: column;
+
+  max-width: 720px;
+  width: 100%;
   margin: 20px auto;
 
   background-color: var(--bg);
   color: var(--text);
   font-family: Joan;
 
-  box-sizing: border-box;
 }
 
 /* Link */
@@ -72,10 +81,11 @@ h3 {
 }
 
 header {
-  width: 720px;
+  width: 100%;
   border-bottom: rgb(var(--rgb-border)) 1px solid;
 }
 
+nav {}
 
 nav ul {
   display: flex;
@@ -111,9 +121,12 @@ li:active a:visited {
 }
 
 main {
-  width: 480px;
+  max-width: 480px;
+  width: 100%;
   margin: 0 auto;
   padding: 2rem 0;
+
+  flex: 1;
 }
 
 /* Links */
@@ -185,5 +198,16 @@ small {
 
 .pippi {
   animation: float 4s ease-in-out infinite;
+}
+
+/* Smartphone */
+@media (max-width: 599px) {
+  nav {
+    display: none;
+  }
+  
+  main {
+    padding: 0 1rem;
+  }
 }
 
