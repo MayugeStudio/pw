@@ -11,13 +11,13 @@
 
 @font-face {
   font-family: Joan;
-  src: url(fonts/Joan-Regular.ttf);
+  src: url(./fonts/Joan-Regular.ttf);
 }
 
 * { box-sizing: border-box; }
 
 html, body {
-  height: 90%;
+  height: 100vh;
 }
 
 body {
@@ -26,12 +26,12 @@ body {
 
   max-width: 720px;
   width: 100%;
-  margin: 20px auto;
+  margin: 0 auto;
+  padding: 20px 20px;
 
   background-color: var(--bg);
   color: var(--text);
   font-family: Joan;
-
 }
 
 /* Link */
@@ -48,7 +48,8 @@ a:visited {
 h1 {
   color: var(--text);
   font-size: 2rem;
-  margin-bottom: 25px;
+  padding-left: 1rem;
+  margin-bottom: 1rem;
 }
 
 h1::before {
@@ -73,7 +74,7 @@ h2 {
 
   border-left: 2px solid var(--secondary);
   padding-left: 1rem;
-  margin-bottom: 25px;
+  margin-bottom: 1rem;
 }
 
 h3 {
@@ -83,6 +84,7 @@ h3 {
 header {
   width: 100%;
   border-bottom: rgb(var(--rgb-border)) 1px solid;
+  margin-bottom: 1rem;
 }
 
 nav {}
@@ -124,7 +126,7 @@ main {
   max-width: 480px;
   width: 100%;
   margin: 0 auto;
-  padding: 2rem 0;
+  padding: 0 1rem;
 
   flex: 1;
 }
@@ -136,7 +138,7 @@ main {
 
 #links li {
   position: relative;
-  margin-bottom: 5px;
+  margin-bottom: 0.35rem;
 }
 
 #links li::before {
@@ -157,7 +159,7 @@ main {
 p {
   font-size: 1.3rem;
   line-height: 1.6;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 }
 
 footer {
@@ -201,13 +203,5 @@ small {
 }
 
 /* Smartphone */
-@media (max-width: 599px) {
-  nav {
-    display: none;
-  }
-  
-  main {
-    padding: 0 1rem;
-  }
-}
+@media (max-width: 599px) {}
 
