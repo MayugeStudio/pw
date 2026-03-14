@@ -78,7 +78,8 @@ h2 {
 }
 
 h3 {
-  font-size: 1.2rem;
+  font-size: 1.4rem;
+  font-weight: bold;
 }
 
 header {
@@ -132,16 +133,16 @@ main {
 }
 
 /* Links */
-#links {
+.list-container {
   margin-left: 1rem;
 }
 
-#links li {
+.list-container li {
   position: relative;
   margin-bottom: 0.35rem;
 }
 
-#links li::before {
+.list-container li::before {
   content: "";
   position: absolute;
   width: 6px;
@@ -152,14 +153,23 @@ main {
   background-color: var(--secondary);
 }
 
-#links li a {
+.list-container li a {
   font-size: 1.3rem;
 }
 
 p {
-  font-size: 1.3rem;
+  font-size: 1.1rem;
   line-height: 1.6;
   margin-bottom: 1rem;
+}
+
+span.description {
+  display: inline-block;
+  font-size: 0.9rem;
+  font-weight: normal;
+
+  padding: 0.4rem 0;
+  color: rgb(255 255 255 / 70%);
 }
 
 footer {
